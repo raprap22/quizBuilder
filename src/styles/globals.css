@@ -5,11 +5,13 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --button-width: 150px;
+  --button-color: #007bff;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
+    --background: #e3e3e3;
     --foreground: #ededed;
   }
 }
@@ -18,4 +20,41 @@ body {
   color: var(--foreground);
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+.button {
+  padding: var(--button-height) var(--button-width);
+  background-color: var(--button-color);
+  color: white;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  text-align: center;
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: var(--button-hover-color);
+}
+
+.button:focus {
+  outline: 2px solid var(--button-focus-color);
+}
+
+.button-blue {
+  --button-color: #3b82f6;
+  --button-hover-color: #2563eb;
+  --button-focus-color: #1e40af;
+}
+
+.button-green {
+  --button-color: #10b981;
+  --button-hover-color: #059669;
+  --button-focus-color: #064e3b;
+}
+
+.button-red {
+  --button-color: #ef4444;
+  --button-hover-color: #dc2626;
+  --button-focus-color: #991b1b;
 }
