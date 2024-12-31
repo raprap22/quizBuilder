@@ -16,7 +16,7 @@ export type QuizFormProps = {
   onSubmit: (data: any) => void;
 };
 
-export const QuizForm = ({ defaultValues, isSubmitting, onSubmit }: QuizFormProps) => {
+const QuizForm = ({ defaultValues, isSubmitting, onSubmit }: QuizFormProps) => {
   const {
     control,
     handleSubmit,
@@ -170,3 +170,5 @@ export const QuizForm = ({ defaultValues, isSubmitting, onSubmit }: QuizFormProp
     </Form>
   );
 };
+
+export default QuizForm;

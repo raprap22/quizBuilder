@@ -2,7 +2,7 @@ import { useRouter } from 'next/router';
 import { Button, Card, Spin, Typography, message } from 'antd';
 import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query';
 import { fetchQuizById, createQuiz, updateQuiz } from '@/services';
-import { QuizForm } from './components/QuizForm';
+import QuizForm from './components/QuizForm';
 import { useSelector } from 'react-redux';
 import store, { RootState } from '@/store';
 import { ArrowLeftOutlined, LoadingOutlined } from '@ant-design/icons';
