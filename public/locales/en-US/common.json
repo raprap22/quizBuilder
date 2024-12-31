@@ -79,5 +79,10 @@
   "ExitQuizConfirmation": "Exit Quiz Confirmation",
   "Areyousureyouwanttoexitthequiz": "Are you sure you want to exit the quiz?",
   "of": "of",
-  "Quizupdatedsuccessfully": "Quiz updated successfully!"
+  "Quizupdatedsuccessfully": "Quiz updated successfully!",
+  "Score": "Score",
+  "TimeLimit": "Time Limit",
+  "Errorfetchingscores": "Error fetching scores",
+  "AuthorScore": "Author:",
+  "YourScores": "Your Scores"
 }

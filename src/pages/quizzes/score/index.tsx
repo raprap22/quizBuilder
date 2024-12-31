@@ -6,6 +6,7 @@ import { useSelector } from 'react-redux';
 import { useQuery } from '@tanstack/react-query';
 import moment from 'moment';
 import { LoadingOutlined } from '@ant-design/icons';
+import { useTranslation } from 'react-i18next';
 
 const { Title, Text } = Typography;
 
@@ -23,6 +24,8 @@ const ScorePage = () => {
     enabled: !!user?.id,
   });
 
+  const { t } = useTranslation();
+
   if (isLoading) {
     return (
       <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-[9999]">
@@ -38,7 +41,7 @@ const ScorePage = () => {
     return (
       <div className="min-h-screen flex items-center justify-center bg-gray-100">
         <Text className="text-red-500">
-          Error fetching scores: {error instanceof Error ? error.message : 'Unknown error'}
+          {t('Errorfetchingscores')}: {error instanceof Error ? error.message : 'Unknown error'}
         </Text>
       </div>
     );
@@ -47,22 +50,20 @@ const ScorePage = () => {
   return (
     <div className="min-h-screen bg-gray-100">
       <header className="bg-blue-500 text-white text-center mx-6 py-6 rounded-lg">
-        <span className="text-white font-bold text-2xl">
-          Your Scores
-        </span>
+        <span className="text-white font-bold text-2xl">{t('YourScores')}</span>
       </header>
       <main className="p-6">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
           {scores?.map((score: any) => (
             <Card key={score.id} title={score.quizzes?.title} className="shadow-md">
               <p>
-                <strong>Score:</strong> {score?.score}
+                <strong>{t('Score')}:</strong> {score?.score}
               </p>
               <p>
-                <strong>Author:</strong> {score.quizzes?.author}
+                <strong>{t('AuthorScore')}</strong> {score.quizzes?.author}
               </p>
               <p>
-                <strong>Time Limit:</strong> {score.quizzes?.time} minutes
+                <strong>{t('TimeLimit')}:</strong> {score.quizzes?.time} {t('Minutes')}
               </p>
               <p className="text-gray-500 text-sm mt-4">
                 {moment(score.created_at).format('DD MMM YYYY, HH:mm')}

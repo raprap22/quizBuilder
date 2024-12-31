@@ -79,5 +79,10 @@
   "ExitQuizConfirmation": "تأكيد الخروج من الاختبار",
   "Areyousureyouwanttoexitthequiz": "هل أنت متأكد أنك تريد الخروج من الاختبار؟",
   "of": "ل",
-  "Quizupdatedsuccessfully": "تم تحديث الاختبار بنجاح!"
+  "Quizupdatedsuccessfully": "تم تحديث الاختبار بنجاح!",
+  "Score": "نتيجة",
+  "TimeLimit": "الحد الزمني",
+  "Errorfetchingscores": "حدث خطأ أثناء جلب النتائج",
+  "AuthorScore": "مؤلف:",
+  "YourScores": "عشرات الخاص بك"
 }
